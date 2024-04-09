@@ -9,7 +9,6 @@ class UfosPark implements GuestDispatcher{
     
 
     private double fee = 500d;
-    private double credit = 3000;
     private final Map<String, String> flota = new HashMap<String, String>();
     
     UfosPark() {};
