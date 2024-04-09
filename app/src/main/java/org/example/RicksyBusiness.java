@@ -1,4 +1,4 @@
-/*/**
+/**
  * Ricksy Business
  * ===============
  * Rick se queda a cargo Morty y Summer, 
@@ -21,9 +21,9 @@
  * componente receptivo, de modo que cuando el receptivo
  * da de alta a un invitado/a automáticamente cargan 
  * en la tarjeta del invitado/a el coste de ambos servicios. 
- 
+ */
 
- package ricksy.business;
+ package org.example;
 
  public class RicksyBusiness {
      
@@ -31,9 +31,9 @@
          System.out.println();
 
          
-          * Crea una tarjeta de crédito para Abradolph.
+          /* Crea una tarjeta de crédito para Abradolph.
           * Como es una AndromedanExpress
-          * el crédito inicial es de 3000 EZIS
+          * el crédito inicial es de 3000 EZIS*/
         
  
          CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
@@ -43,13 +43,13 @@
          System.out.println(abradolph);
  
          
-          * Construye el componente de reserva de Ovnis.
+          /* Construye el componente de reserva de Ovnis.
           * Recibe el objeto tarjeta de crédito del invitado/a
           * en el método dispatch(card)
           * y realiza un cargo a la tarjeta.
           * Si hay saldo suficiente se reserva un UberOvni
           * de los que estén libres.
-          * El coste del ovni es de 500 EZIs.
+          * El coste del ovni es de 500 EZIs.*/
         
  
          UfosPark ufosPark = new UfosPark();
@@ -125,7 +125,7 @@
          ufosPark.add("trex");
          System.out.println(ufosPark);
  
- 
+ /* 
          
           * Construye el dispensador de packs de bienvenida.
           * Indica el numero de unidades y el coste de cada
@@ -250,5 +250,7 @@
          System.out.println("Packs: " + expender.stock());
          System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
      }
+     /* */
  }
- */
+}
+ 
