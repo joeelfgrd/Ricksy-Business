@@ -33,7 +33,9 @@ public class CreditCard implements PayMethod{
 
         @Override
         public String toString() {
-            return "owner: " + owner + ", /nnumber: " + number + ", /ncredit: " + credit  + symbol;
+            return "owner: " + owner + 
+            ", /nnumber: " + number + 
+            ", /ncredit: " + credit  + symbol;
         }
 
 
