@@ -19,8 +19,8 @@ public class CrystalExpender implements GuestDispatcher{
     }
     @Override
     public String toString(){
-        return "stock" + this.stock + 
-        "/ncost" + this.itemCost;
+        return "stock  " + this.stock + 
+        "\ncost  " + this.itemCost;
 
     }
 }
