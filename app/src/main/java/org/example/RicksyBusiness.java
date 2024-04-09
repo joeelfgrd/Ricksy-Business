@@ -125,11 +125,12 @@
          ufosPark.add("trex");
          System.out.println(ufosPark);
  
- /* 
+ 
          
-          * Construye el dispensador de packs de bienvenida.
+         
+         /* Construye el dispensador de packs de bienvenida.
           * Indica el numero de unidades y el coste de cada
-          * uno de ellos, que es de 50 EZIs
+          * uno de ellos, que es de 50 EZIs*/
           
  
          CrystalExpender packExpender = new CrystalExpender(3, 50);
@@ -154,15 +155,15 @@
          System.out.println("Packs\n" + packExpender);
          System.out.println("Credito de GearHead: " + gearHead.credit());
  
- 
+  
          
-          * Vamos a automatizar ahora ambas tareas, de modo que
+          /** Vamos a automatizar ahora ambas tareas, de modo que
           * cuando llega un invitado/a se le asiga un ovni
           * y un pack y se realiza el cargo a la tarjeta.
           * 
           * Para ello, crea el componente receptivo
           * y registra (añade) los componentes UfosPark
-          * y CrystalDispatcher al receptivo
+          * y CrystalDispatcher al receptivo*/
           
  
          Receptivo receptivo = new Receptivo();
@@ -204,10 +205,11 @@
          morty = new CreditCard("Morty", "0000000000000000");
          receptivo.dispatch(morty);
          mostrarReserva(morty, packExpender, ufosPark);
+        }
          
  
          
-          * A por el 10!! 
+         /* * A por el 10!! 
           * Wubba lubba dub dub!!
           * 
           * Añade otra tarea al receptivo,
@@ -217,12 +219,12 @@
           * al ovni y al pack de bienvenida.
           * Hay 100 RickMenús y su precio es de 10 EZIs.
           * Muestra el total de pedidos y la lista de
-          * invitados/as (numero de tarjeta) que han hecho un pedido.
+          * invitados/as (numero de tarjeta) que han hecho un pedido. */
           
  
           // tu código aquí
  
-         RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+         /*RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
  
          receptivo.registra(MenuDispatcher);
  
@@ -243,14 +245,14 @@
              System.out.println(card);
              System.out.println();
          }
-     }
- 
+     }*/
+     
      private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
          System.out.println(card);
          System.out.println("Packs: " + expender.stock());
          System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
      }
-     /* */
+     
  }
-}
+
  
