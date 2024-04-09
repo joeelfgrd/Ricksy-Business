@@ -3,28 +3,35 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UfosPark implements PayMethod{
-    private double fee = 500;
+
+
+class UfosPark implements GuestDispatcher{
+    
+
+    private double fee = 500d;
+    private double credit = 3000;
     private final Map<String, String> flota = new HashMap<String, String>();
     
-    public UfosPark() {};
-    
-    public void add(String ufoID) {
+    UfosPark() {};
+
+    void add(String ufoID) {
         flota.putIfAbsent(ufoID, null);
     }
-    
-    public void dispatch(CreditCard card) {
-        if (card.pay(fee)) {
+
+    public void dispatch(PayMethod payMethod) {
+        
+        if (!flota.containsValue(payMethod.number())) {
             for (Map.Entry<String, String> entry : flota.entrySet()) {
-                if (entry.getValue() == null) {
-                    entry.setValue(card.number());
+                if (entry.getValue() == null && payMethod.pay(fee)) {
+                    flota.put(entry.getKey(), payMethod.number());
                     break;
                 }
             }
         }
+         
     }
+        
     
-
     public String getUfoOf(String cardNumber){
         String ufoID = null;
         for (Map.Entry<String, String> entry : flota.entrySet()) {
@@ -33,10 +40,10 @@ public class UfosPark implements PayMethod{
                 ufoID = entry.getKey();
                 break;
             }
-    
         }
         return ufoID;
     }
+
     @Override
     public String toString() {
         return "UfosPark [fee=" + fee + ", flota=" + flota + "]";
