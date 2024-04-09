@@ -76,7 +76,7 @@ public class UfosParkTest {
                                     .filter(n -> n == morty.number())
                                     .collect(Collectors.toList());
 
-        assertEquals(0, cards.size(), 0);
+        assertEquals(0, cards.size());
         assertEquals(3000, morty.credit(), 0);
     }
 
